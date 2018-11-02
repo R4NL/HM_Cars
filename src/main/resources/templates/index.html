@@ -13,8 +13,12 @@
 </form>
 <table border="1">
     <caption>Таблица машин</caption>
+    <tr>
+        <td> Manufect </td>
+        <td> Marx </td>
+        <td> Engine </td>
+    </tr>
     <tr th:each="car : ${cars}">
-        <td th:text="${car.id}"></td>
         <td th:text="${car.manufect.getName()}"></td>
         <td th:text="${car.marx}"></td>
         <td th:text="${car.engine}"></td>

@@ -9,14 +9,15 @@
 </head>
 <body>
 <form action="/" method="post">
-    <p><input maxlength="25" size="40" value="Marx" name="Marx"></p>
-    <p><input maxlength="25" size="40" value="Engine" name="Engine"></p>
-    <p><select name="Manufect">
-        <option> one</option>
-        <option> two</option>
-        <option> three</option>
-        <option> four</option>
-    </select></p>
+    <p>Car Marx <input maxlength="25" size="40" value="Marx" name="Marx"></p>
+    <p>Car Engine <input maxlength="25" size="40" value="Engine" name="Engine"></p>
+    <p>Car Manufect
+        <select name="Manufect" >
+            <option th:each="manufect:${manufects }"
+                    th:value="${manufect }"
+                    th:text="${manufect }"/>
+        </select>
+    </p>
     <p><input type="submit" value="Отправить"></p>
 </form>
 </body>

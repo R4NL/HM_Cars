@@ -50,8 +50,13 @@ public class MyController {
         return "index";
     }
 
-    @RequestMapping(value = "/add")
-    public String addCar() {
+    @RequestMapping(value = "/add",method = RequestMethod.GET)
+    public String addCar(Model model) {
+        List<String> list=new ArrayList<>();
+        for (Manufect i:manufectRepository.findAll()) {
+            list.add(i.getName());
+        }
+        model.addAttribute("manufects",list);
         return "addCar";
     }
 

@@ -66,5 +66,8 @@ public class Manufect {
         return Objects.hash(id, name, carList);
     }
 
-
+    @Override
+    public String toString() {
+        return  name;
+    }
 }
